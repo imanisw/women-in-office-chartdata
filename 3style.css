@@ -1,0 +1,184 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+body {
+
+  background-color: white;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: pink;
+  color: white;
+  font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+tml {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+/* responsive images */
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 23px;
+    font-family: sans-serif;
+    color: black;
+}
+h2 {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+}
+h3 {
+    font-family: serif;
+    font-size: 30px;
+    color: orange;
+    text-align: center;
+}
+
+h4 {
+    font-family: serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.subheading{
+  font-size: 15px;
+  font-family: serif;
+}
+
+.intro{
+  text-align: justify;
+}
+
+.figcaption {
+    font-size: 13px;
+    font-family: serif;
+}
+
+hr {
+    height: 4px;
+    background: gray;
+}
+
+.last {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.container,
+.icon-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.main_img {
+    width: 100%;
+}
+
+.head-photo {
+    font-size: 15px;
+    color: black;
+    margin: 5px;
+}
+
+.icon-container img {
+    display: block;
+    max-width: 100px;
+    margin: auto;
+}
+
+.graphic-text {
+    margin: auto;
+    text-align: left;
+    display: flex;
+}
+
+.icon-border {
+     border: 1.5px;
+     color: orange;
+     border-width: medium;
+     margin: 10px;
+     padding: 20px;
+ }
+
+ .caption{
+   font-style: italic;
+   font-size: 12px;
+ }
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    p.intro {
+        max-width: 65%,
+    }
+
+    .icon-container {
+        /* Flex box styles go on the flex box element */
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .graphic {
+        /* There are many ways to handle sizing, but flex-basis is the one that I like best for control.
+     * There are three elements so I made it 30%. With justify content set to space between, the extra 3% per element will go to negative space
+     * serving as gutters */
+        flex-basis: 30%;
+        /* font-size: 1.3em; */
+    }
+
+    .graphic-text {
+        padding: 10px;
+        width: 800px;
+        justify-content: space-around;
+        /* width: 500px; */
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 900px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+    .container {
+        max-width: 500px;
+    }
+}
